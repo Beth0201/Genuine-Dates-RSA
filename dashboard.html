@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Genuine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard">
+    <!-- Dashboard Navigation -->
+    <nav class="dashboard-nav">
+        <div class="dashboard-nav-container">
+            <a href="index.html" class="dashboard-logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 4C16 4 8 8 8 16C8 20 10 24 16 28C22 24 24 20 24 16C24 8 16 4 16 4Z" fill="currentColor"/>
+                    <circle cx="16" cy="16" r="4" fill="white"/>
+                </svg>
+                <span>Genuine</span>
+            </a>
+            
+            <div class="dashboard-nav-links">
+                <button class="nav-item active" data-section="discover">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>Discover</span>
+                </button>
+                <button class="nav-item" data-section="matches">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Matches</span>
+                    <span class="badge">3</span>
+                </button>
+                <button class="nav-item" data-section="messages">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Messages</span>
+                    <span class="badge">5</span>
+                </button>
+                <button class="nav-item" data-section="profile">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Profile</span>
+                </button>
+            </div>
+            
+            <div class="dashboard-nav-user">
+                <button class="btn-notifications">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="notification-dot"></span>
+                </button>
+                <div class="user-menu">
+                    <button class="user-avatar">
+                        <span>A</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <a href="#">Settings</a>
+                        <a href="#">Help Center</a>
+                        <a href="index.html">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <!-- Discover Section -->
+        <section class="dashboard-section active" id="discover">
+            <div class="section-container">
+                <div class="section-header-dash">
+                    <h2>Discover New Connections</h2>
+                    <div class="filters">
+                        <button class="btn-filter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Filters
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="discover-cards">
+                    <div class="discover-card">
+                        <div class="discover-card-image">
+                            <div class="image-placeholder" style="background: linear-gradient(135deg, #e8a590, #d4866f);">
+                                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </div>
+                            <div class="compatibility-badge">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
+                                </svg>
+                                87% Match
+                            </div>
+                        </div>
+                        <div class="discover-card-content">
+                            <div class="discover-card-header">
+                                <h3>Sarah</h3>
+                                <span class="age">28</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="verified-icon">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#6f9d86" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <p class="location">San Francisco, CA • 2 miles away</p>
+                            <p class="bio">Creative director who loves hiking, indie films, and discovering hidden coffee shops. Looking for someone to explore the city with.</p>
+                            <div class="interests">
+                                <span class="interest-tag">Photography</span>
+                                <span class="interest-tag">Hiking</span>
+                                <span class="interest-tag">Coffee</span>
+                            </div>
+                        </div>
+                        <div class="discover-card-actions">
+                            <button class="btn-action btn-pass">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                            <button class="btn-action btn-like">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2.5" fill="currentColor"/>
+                                </svg>
+                            </button>
+                            <button class="btn-action btn-super-like">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2.5" fill="currentColor"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Matches Section -->
+        <section class="dashboard-section" id="matches">
+            <div class="section-container">
+                <div class="section-header-dash">
+                    <h2>Your Matches</h2>
+                    <p>People who liked you back</p>
+                </div>
+                
+                <div class="matches-grid">
+                    <div class="match-card-small">
+                        <div class="match-image">
+                            <div class="image-placeholder" style="background: linear-gradient(135deg, #6f9d86, #5a8170);">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </div>
+                            <div class="new-badge">New</div>
+                        </div>
+                        <div class="match-info">
+                            <h4>Emma</h4>
+                            <p>26 • Oakland</p>
+                        </div>
+                        <button class="btn-message">Message</button>
+                    </div>
+                    
+                    <div class="match-card-small">
+                        <div class="match-image">
+                            <div class="image-placeholder" style="background: linear-gradient(135deg, #e8c547, #d4b03a);">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="match-info">
+                            <h4>Maya</h4>
+                            <p>29 • Berkeley</p>
+                        </div>
+                        <button class="btn-message">Message</button>
+                    </div>
+                    
+                    <div class="match-card-small">
+                        <div class="match-image">
+                            <div class="image-placeholder" style="background: linear-gradient(135deg, #d4866f, #b87158);">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </div>
+                            <div class="new-badge">New</div>
+                        </div>
+                        <div class="match-info">
+                            <h4>Lisa</h4>
+                            <p>27 • San Francisco</p>
+                        </div>
+                        <button class="btn-message">Message</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Messages Section -->
+        <section class="dashboard-section" id="messages">
+            <div class="section-container-full">
+                <div class="messages-layout">
+                    <div class="conversations-sidebar">
+                        <div class="conversations-header">
+                            <h3>Messages</h3>
+                            <button class="btn-filter-small">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="conversations-list">
+                            <div class="conversation-item active">
+                                <div class="conversation-avatar">
+                                    <div class="avatar-circle" style="background: linear-gradient(135deg, #6f9d86, #5a8170);">E</div>
+                                    <div class="online-dot"></div>
+                                </div>
+                                <div class="conversation-details">
+                                    <div class="conversation-header">
+                                        <h4>Emma</h4>
+                                        <span class="time">2m</span>
+                                    </div>
+                                    <p class="last-message">That sounds amazing! I'd love to...</p>
+                                </div>
+                                <div class="unread-badge">2</div>
+                            </div>
+                            
+                            <div class="conversation-item">
+                                <div class="conversation-avatar">
+                                    <div class="avatar-circle" style="background: linear-gradient(135deg, #e8c547, #d4b03a);">M</div>
+                                </div>
+                                <div class="conversation-details">
+                                    <div class="conversation-header">
+                                        <h4>Maya</h4>
+                                        <span class="time">1h</span>
+                                    </div>
+                                    <p class="last-message">Have you been to the new exhibit?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="conversation-item">
+                                <div class="conversation-avatar">
+                                    <div class="avatar-circle" style="background: linear-gradient(135deg, #d4866f, #b87158);">L</div>
+                                </div>
+                                <div class="conversation-details">
+                                    <div class="conversation-header">
+                                        <h4>Lisa</h4>
+                                        <span class="time">3h</span>
+                                    </div>
+                                    <p class="last-message">Thanks for the recommendation!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-area">
+                        <div class="chat-header">
+                            <div class="chat-user-info">
+                                <div class="avatar-circle" style="background: linear-gradient(135deg, #6f9d86, #5a8170); width: 40px; height: 40px; font-size: 18px;">E</div>
+                                <div>
+                                    <h4>Emma</h4>
+                                    <p class="status">Active now</p>
+                                </div>
+                            </div>
+                            <div class="chat-actions">
+                                <button class="btn-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </button>
+                                <button class="btn-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <line x1="12" y1="16" x2="12.01" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="messages-list">
+                            <div class="message message-received">
+                                <div class="message-bubble">
+                                    <p>Hey! I saw we both love hiking. Have you done any trails around the Bay Area?</p>
+                                    <span class="message-time">10:30 AM</span>
+                                </div>
+                            </div>
+                            <div class="message message-sent">
+                                <div class="message-bubble">
+                                    <p>Yes! I just did Mount Tamalpais last weekend. The views were incredible!</p>
+                                    <span class="message-time">10:32 AM</span>
+                                </div>
+                            </div>
+                            <div class="message message-received">
+                                <div class="message-bubble">
+                                    <p>That sounds amazing! I'd love to check it out. Would you recommend it for someone who's moderately experienced?</p>
+                                    <span class="message-time">10:35 AM</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <form class="message-form">
+                            <input type="text" placeholder="Type your message..." required>
+                            <button type="submit" class="btn-send">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section class="dashboard-section" id="profile">
+            <div class="section-container">
+                <div class="section-header-dash">
+                    <h2>Your Profile</h2>
+                    <button class="btn-primary">Edit Profile</button>
+                </div>
+                
+                <div class="profile-grid">
+                    <div class="profile-card">
+                        <div class="profile-image-large">
+                            <div class="image-placeholder" style="background: linear-gradient(135deg, #d4866f, #b87158); width: 100%; height: 320px; border-radius: 16px;">
+                                <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </div>
+                            <button class="btn-upload-photo">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/>
+                                    <path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                Add Photos
+                            </button>
+                        </div>
+                        <div class="profile-info">
+                            <div class="profile-header">
+                                <h3>Alex</h3>
+                                <span class="profile-age">28</span>
+                                <span class="verified-badge">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#6f9d86" stroke-width="2" fill="none"/>
+                                    </svg>
+                                    Verified
+                                </span>
+                            </div>
+                            <p class="profile-location">San Francisco, CA</p>
+                            <div class="membership-badge">Premium Member</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-cards">
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: rgba(212, 134, 111, 0.1); color: var(--color-primary);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="stat-number stat-matches">12</div>
+                                <div class="stat-label">Matches</div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: rgba(111, 157, 134, 0.1); color: var(--color-secondary);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="stat-number stat-conversations">8</div>
+                                <div class="stat-label">Active Chats</div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: rgba(232, 197, 71, 0.1); color: var(--color-accent);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="stat-number stat-likes">23</div>
+                                <div class="stat-label">Likes Received</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="profile-details">
+                    <div class="profile-section">
+                        <h3>About Me</h3>
+                        <p>This is where your bio would appear. Share what makes you unique, what you're passionate about, and what you're looking for in a connection.</p>
+                        <button class="btn-secondary">Add Bio</button>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h3>My Interests</h3>
+                        <div class="interests">
+                            <span class="interest-tag">Photography</span>
+                            <span class="interest-tag">Hiking</span>
+                            <span class="interest-tag">Coffee</span>
+                            <span class="interest-tag">Travel</span>
+                            <span class="interest-tag">Cooking</span>
+                        </div>
+                        <button class="btn-secondary">Edit Interests</button>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h3>Looking For</h3>
+                        <div class="looking-for-tags">
+                            <span class="tag">Long-term relationship</span>
+                            <span class="tag">Shared values</span>
+                            <span class="tag">Active lifestyle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Dashboard navigation
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const section = item.dataset.section;
+                
+                // Update nav items
+                document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                
+                // Update sections
+                document.querySelectorAll('.dashboard-section').forEach(s => s.classList.remove('active'));
+                document.getElementById(section).classList.add('active');
+            });
+        });
+        
+        // User dropdown
+        const userAvatar = document.querySelector('.user-avatar');
+        const userDropdown = document.querySelector('.user-dropdown');
+        
+        userAvatar.addEventListener('click', (e) => {
+            e.stopPropagation();
+            userDropdown.classList.toggle('show');
+        });
+        
+        document.addEventListener('click', () => {
+            userDropdown.classList.remove('show');
+        });
+    </script>
+</body>
+</html>
