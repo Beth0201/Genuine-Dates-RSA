@@ -133,52 +133,89 @@ img {
 }
 
 .mobile-menu-btn {
+/* Mobile Menu Button */
+.mobile-menu-btn {
     display: none;
     flex-direction: column;
     gap: 6px;
     padding: 8px;
-}
-
-.mobile-menu-btn span {
-    width: 24px;
-    height: 2px;
-    background: var(--color-text);
-    transition: var(--transition);
-}
-
-/* Buttons */
-.btn-primary {
-    display: inline-block;
-    padding: 12px 24px;
-    background: var(--color-primary);
-    color: var(--color-white);
-    border-radius: 12px;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.btn-primary:hover {
-    background: var(--color-primary-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-
-.btn-secondary {
-    display: inline-block;
-    padding: 12px 24px;
     background: transparent;
-    color: var(--color-text);
-    border: 2px solid var(--color-border);
-    border-radius: 12px;
-    font-weight: 600;
-    transition: var(--transition);
+    border: none;
+    cursor: pointer;
 }
 
-.btn-secondary:hover {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 28px;
 }
 
+.hamburger .line {
+    width: 100%;
+    height: 3px;
+    background: var(--color-text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger animation when active */
+.mobile-menu-btn.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.mobile-menu-btn.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 65px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 65px);
+        background: var(--color-white);
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 24px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+        overflow-y: auto;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 16px 20px;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+    
+    .nav-links a:hover {
+        background: var(--color-bg);
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+        padding: 16px 20px !important;
+    }
+}
 .btn-hero {
     display: inline-block;
     padding: 16px 40px;
